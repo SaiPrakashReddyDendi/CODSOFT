@@ -34,6 +34,7 @@ calculator-app/
 3. Use the on-screen buttons **or your keyboard** to perform calculations.
 
 ### Keyboard Shortcuts:
+
 - Numbers (`0–9`)
 - Operators (`+`, `-`, `*`, `/`)
 - Decimal (`.`)
@@ -45,7 +46,7 @@ calculator-app/
 
 ## Live Preview
 
-👉 [View Calculator]()  
+👉 [View Calculator](https://htmlpreview.github.io/?https://github.com/SaiPrakashReddyDendi/CODSOFT/blob/main/Calculator/index.html)
 
 ---
 
@@ -56,4 +57,5 @@ calculator-app/
 ---
 
 ## License
+
 This project is open-source and free to use.
