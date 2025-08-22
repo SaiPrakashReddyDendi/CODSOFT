@@ -46,7 +46,7 @@ calculator-app/
 
 ## Live Preview
 
-👉 [View Calculator](https://htmlpreview.github.io/?https://github.com/SaiPrakashReddyDendi/CODSOFT/blob/main/Calculator/index.html)
+👉 [View Calculator](https://htmlpreview.github.io/?https://github.com/SaiPrakashReddyDendi/CODSOFT/blob/main/codsoft_task3/index.html)
 
 ---
 

@@ -32,7 +32,7 @@ It showcases skills, projects, resume, and provides a contact form for easy comm
 
 ## Live Preview
 
-👉 [View Portfolio](https://htmlpreview.github.io/?https://github.com/SaiPrakashReddyDendi/CODSOFT/blob/main/Portfolio/index.html)
+👉 [View Portfolio](https://htmlpreview.github.io/?https://github.com/SaiPrakashReddyDendi/CODSOFT/blob/main/codsoft_task1/index.html)
 
 ---
 

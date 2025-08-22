@@ -13,15 +13,15 @@ The CodSoft Web Development Internship is a 4-week virtual internship aimed at p
 
 **Task 1**
 
-- [Portfolio](https://github.com/SaiPrakashReddyDendi/CODSOFT/tree/main/Portfolio)
+- [Portfolio](https://github.com/SaiPrakashReddyDendi/CODSOFT/tree/main/codsoft_task1)
 
 **Task 2**
 
-- [Landing Page](https://github.com/SaiPrakashReddyDendi/CODSOFT/tree/main/LandingPage)
+- [Landing Page](https://github.com/SaiPrakashReddyDendi/CODSOFT/tree/main/codsoft_task2)
 
 **Task 3**
 
-- [Calculator](https://github.com/SaiPrakashReddyDendi/CODSOFT/tree/main/Calculator)
+- [Calculator](https://github.com/SaiPrakashReddyDendi/CODSOFT/tree/main/codsoft_task3)
 
 ## License
 

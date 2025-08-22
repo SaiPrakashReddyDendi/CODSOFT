@@ -27,7 +27,7 @@ This website showcases **AutoElite**, a premium automotive brand, with sections 
 
 ## Live Preview
 
-👉 [View Website](https://htmlpreview.github.io/?https://github.com/SaiPrakashReddyDendi/CODSOFT/blob/main/LandingPage/index.html)
+👉 [View Website](https://htmlpreview.github.io/?https://github.com/SaiPrakashReddyDendi/CODSOFT/blob/main/codsoft_task2/index.html)
 
 ---
 
