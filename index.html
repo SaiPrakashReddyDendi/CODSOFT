@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CODSOFT Web Dev Internship – Project Showcase</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0b1020;
+            --card: #111833;
+            --muted: #aab2d5;
+            --text: #eef1ff;
+            --accent: #6cf;
+            --accent-2: #ff6aa6;
+            --ring: #2f3a66
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+            background: radial-gradient(1200px 600px at 10% -10%, #1a2247 0%, transparent 60%),
+                radial-gradient(900px 600px at 110% 10%, #1a2247 0%, transparent 50%),
+                var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none
+        }
+
+        a:hover {
+            opacity: .9
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 24px
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            backdrop-filter: saturate(1.2) blur(8px);
+            background: rgba(11, 16, 32, .65);
+            border-bottom: 1px solid #1b244a
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px
+        }
+
+        .brand h1 {
+            font-family: "Playfair Display", serif;
+            font-size: 1.15rem;
+            margin: 0
+        }
+
+        .hero {
+            padding: 64px 0 24px
+        }
+
+        .hero h2 {
+            font-family: "Playfair Display", serif;
+            font-size: clamp(1.8rem, 3.6vw, 3rem);
+            line-height: 1.15;
+            margin: 0 0 12px
+        }
+
+        .hero p {
+            color: var(--muted);
+            max-width: 760px;
+            margin: 0
+        }
+
+        .cta {
+            margin-top: 18px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap
+        }
+
+        .btn {
+            cursor: pointer;
+            border: none;
+            padding: 12px 16px;
+            border-radius: 10px;
+            font-weight: 700;
+            transition: transform .15s ease, box-shadow .2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent), #9af);
+            color: #031033;
+            box-shadow: 0 8px 24px rgba(108, 204, 255, .25)
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-1px)
+        }
+
+        .btn-ghost {
+            background: #0f1733;
+            border: 1px solid #22306b;
+            color: var(--text)
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 18px
+        }
+
+        .card {
+            grid-column: span 12;
+            background: linear-gradient(180deg, #111833 0%, #0f1733 100%);
+            border: 1px solid #1f2a55;
+            border-radius: 18px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .25)
+        }
+
+        @media(min-width:740px) {
+            .card {
+                grid-column: span 6
+            }
+        }
+
+        .card-head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 10px
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1px solid #22306b;
+            color: #cfe2ff;
+            background: #0f1733;
+            padding: 6px 10px;
+            border-radius: 999px;
+            font-size: .8rem
+        }
+
+        .title {
+            font-weight: 800;
+            font-size: 1.25rem;
+            margin: 0
+        }
+
+        .desc {
+            color: var(--muted);
+            margin: .35rem 0 .75rem
+        }
+
+        .stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 10px 0 14px
+        }
+
+        .chip {
+            font-size: .78rem;
+            color: #0b1020;
+            background: linear-gradient(135deg, #ffd6e7, var(--accent-2));
+            padding: 6px 10px;
+            border-radius: 999px
+        }
+
+        .chip.alt {
+            background: linear-gradient(135deg, #b9fffe, #6cf)
+        }
+
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 8px
+        }
+
+        .btn-link {
+            padding: 10px 12px;
+            border-radius: 10px;
+            border: 1px solid #22306b;
+            background: #0f1733;
+            color: var(--text)
+        }
+
+        .btn-link:hover {
+            transform: translateY(-1px)
+        }
+
+        .section {
+            padding: 28px 0
+        }
+
+        .section h3 {
+            font-family: "Playfair Display", serif;
+            margin: 0 0 8px
+        }
+
+        .muted {
+            color: var(--muted)
+        }
+
+        footer {
+            margin-top: 36px;
+            padding: 28px 0;
+            border-top: 1px solid #1b244a;
+            color: var(--muted)
+        }
+
+        .foot {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container nav">
+            <div class="brand">
+                <h1>CODSOFT – Web Dev Internship</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Project Showcase</h2>
+            <p>
+                A curated look at three beginner‑friendly projects I built during my CODSOFT Web Development Internship.
+                These
+                helped me sharpen HTML/CSS layout skills and practice JavaScript interactivity.
+            </p>
+            <div class="cta">
+                <a class="btn btn-primary" href="#projects">Explore Projects</a>
+                <a class="btn btn-ghost" href="#experience">Read Internship Experience</a>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <h3>Projects</h3>
+            <p class="muted">Level 1 – Tasks 1 to 3</p>
+            <div class="grid">
+                <article class="card">
+                    <div class="card-head">
+                        <h4 class="title">Task 1 — Personal Portfolio Website</h4>
+                        <span class="tag">HTML & CSS</span>
+                    </div>
+                    <p class="desc">A responsive portfolio featuring Hero, About, Skills, Projects, Resume, and Contact
+                        sections with a bold, modern aesthetic.</p>
+                    <div class="stack">
+                        <span class="chip">Semantic HTML</span>
+                        <span class="chip alt">Responsive CSS</span>
+                        <span class="chip">Grid/Flex</span>
+                    </div>
+                    <div class="actions">
+                        <a class="btn-link"
+                            href="https://htmlpreview.github.io/?https://github.com/SaiPrakashReddyDendi/CODSOFT/blob/main/codsoft_task1/index.html"
+                            target="_blank" rel="noopener">Live Demo</a>
+                        <a class="btn-link"
+                            href="https://github.com/SaiPrakashReddyDendi/CODSOFT/tree/main/codsoft_task1"
+                            target="_blank" rel="noopener">Source Code</a>
+                        <a class="btn-link"
+                            href="https://www.linkedin.com/posts/dendi-sai-prakash-reddy_codsoft-webdevelopment-internship-activity-7364378758193049601-YU8B?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD-VQy4BVknlwfZIaNQF6fp6RErf_kImIOw"
+                            target="_blank" rel="noopener">LinkedIn Post</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-head">
+                        <h4 class="title">Task 2 — Landing Page (AutoElite)</h4>
+                        <span class="tag">HTML & CSS</span>
+                    </div>
+                    <p class="desc">A sleek automotive landing page emphasizing layout, alignment, and visual hierarchy
+                        with a clean, responsive design.</p>
+                    <div class="stack">
+                        <span class="chip">Sections/Columns</span>
+                        <span class="chip alt">Typography</span>
+                        <span class="chip">Color System</span>
+                    </div>
+                    <div class="actions">
+                        <a class="btn-link"
+                            href="https://htmlpreview.github.io/?https://github.com/SaiPrakashReddyDendi/CODSOFT/blob/main/codsoft_task2/index.html"
+                            target="_blank" rel="noopener">Live Demo</a>
+                        <a class="btn-link"
+                            href="https://github.com/SaiPrakashReddyDendi/CODSOFT/tree/main/codsoft_task2"
+                            target="_blank" rel="noopener">Source Code</a>
+                        <a class="btn-link"
+                            href="https://www.linkedin.com/posts/dendi-sai-prakash-reddy_codsoft-webdevelopment-internship-activity-7364551898957312000-OEs4?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD-VQy4BVknlwfZIaNQF6fp6RErf_kImIOw"
+                            target="_blank" rel="noopener">LinkedIn Post</a>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-head">
+                        <h4 class="title">Task 3 — Basic Calculator App</h4>
+                        <span class="tag">HTML • CSS • JS</span>
+                    </div>
+                    <p class="desc">An interactive calculator supporting basic arithmetic, built with a responsive grid
+                        layout and DOM‑driven logic.</p>
+                    <div class="stack">
+                        <span class="chip">DOM Events</span>
+                        <span class="chip alt">Grid Layout</span>
+                        <span class="chip">State & Logic</span>
+                    </div>
+                    <div class="actions">
+                        <a class="btn-link"
+                            href="https://htmlpreview.github.io/?https://github.com/SaiPrakashReddyDendi/CODSOFT/blob/main/codsoft_task3/index.html"
+                            target="_blank" rel="noopener">Live Demo</a>
+                        <a class="btn-link"
+                            href="https://github.com/SaiPrakashReddyDendi/CODSOFT/tree/main/codsoft_task3"
+                            target="_blank" rel="noopener">Source Code</a>
+                        <a class="btn-link"
+                            href="https://www.linkedin.com/posts/dendi-sai-prakash-reddy_codsoft-webdevelopment-internship-activity-7364564645648527361-wkva?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD-VQy4BVknlwfZIaNQF6fp6RErf_kImIOw"
+                            target="_blank" rel="noopener">LinkedIn Post</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <h3>Internship Experience</h3>
+            <p class="muted">CODSOFT • Web Development</p>
+            <div class="card" style="grid-column:span 12">
+                <p>
+                    During this internship I completed three foundational projects that strengthened my understanding of
+                    semantic
+                    HTML, responsive CSS, and essential JavaScript. I practiced structuring content, building accessible
+                    layouts,
+                    and adding interactivity while keeping performance and readability in mind.
+                </p>
+                <ul>
+                    <li>Built a full personal portfolio with clear information architecture.</li>
+                    <li>Designed a polished landing page focusing on alignment, spacing, and visual hierarchy.</li>
+                    <li>Developed an interactive calculator to reinforce DOM events and logic.</li>
+                </ul>
+                <p class="muted">I’m excited to continue learning and shipping projects — feedback is welcome!</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container foot">
+            <span>© <span id="year"></span> • Built with HTML & CSS</span>
+            <span>Connect: <a href="https://linkedin.com/in/dendi-sai-prakash-reddy" target="_blank"
+                    rel="noopener">LinkedIn</a> · <a href="https://github.com/SaiPrakashReddyDendi" target="_blank"
+                    rel="noopener">GitHub</a></span>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear()
+    </script>
+</body>
+
+</html>
